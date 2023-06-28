@@ -1,0 +1,59 @@
+#item-start {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2vw;
+  text-align: center;
+}
+
+#item-start .start {
+  pointer-events: all;
+}
+
+#item-start.hidden {
+  pointer-events: none;
+  transition: all 1s 9s;
+  opacity: 0;
+}
+
+#item-start.hidden div {
+  transition: all 1s 1s;
+  opacity: 0;
+}
+
+#item-start.hidden .start.seal {
+  transition: all 1s 2s;
+  opacity: 0;
+  transform: translate(-12px, -50px);
+}
+
+#item-start.hidden .start.letter {
+  transition: all 2s 5s;
+  transform: translate(0px, -15px);
+}
+
+#item-start.hidden svg {
+  transition: all 1s 7s;
+  opacity: 0;
+}
+
+#item-start.hidden .start.end {
+  transition: all 1s 4s;
+  opacity: 1;
+}
+#item-start .start.end {
+  opacity: 0;
+}
+
+#item-start.hidden .start.top {
+  transition: all 1s 4s;
+  opacity: 0;
+}

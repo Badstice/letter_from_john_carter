@@ -1,0 +1,44 @@
+#fire.hidden {
+  display: none;
+}
+
+#fire {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(
+    circle,
+    rgba(135, 2, 2, 0.6),
+    rgb(252, 142, 4, 0.471),
+    transparent
+  );
+  border-radius: 50%;
+  position: relative;
+  animation: fire-glow 0.2s ease-in-out infinite;
+  top: 80vh;
+  left: 50vw;
+}
+
+@keyframes fire-glow {
+  0% {
+    box-shadow: 0 0 10px 0px rgba(135, 2, 2, 0.6);
+    background: radial-gradient(
+      circle,
+      rgba(252, 142, 4, 0.471),
+      rgba(195, 45, 3, 0.7),
+      transparent
+    );
+  }
+  50% {
+    box-shadow: 0 0 40px 10px rgba(195, 45, 3, 0.7),
+      0 0 20px 5px rgba(252, 142, 4, 0.471), 0 0 5px 2px rgba(135, 2, 2, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px 0px rgba(252, 142, 4, 0.471);
+    background: radial-gradient(
+      circle,
+      rgba(252, 142, 4, 0.471),
+      rgba(135, 2, 2, 0.6),
+      transparent
+    );
+  }
+}

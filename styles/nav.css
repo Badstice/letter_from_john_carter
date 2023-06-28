@@ -1,0 +1,328 @@
+nav {
+  background-color: gray;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  transition: all 0.5s;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 11vw 0;
+  overflow: hidden;
+}
+
+nav.hidden {
+  width: 10vw;
+  justify-content: flex-start;
+}
+
+#btn-menu {
+  width: 10vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.hidden div.item-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav div.item-container {
+  display: flex;
+  width: 90vw;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vw 10vw;
+}
+
+nav div.item-container div.btn-item {
+  margin: 5px 1px;
+  width: 9vw;
+  height: 9vw;
+  transition: display 0s, opacity 1s 2s;
+}
+
+nav div.item-container div.btn-item.hidden {
+  display: none;
+  opacity: 0;
+}
+
+nav div.item-container div.btn-item p {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+nav.hidden div.item-container div.btn-item p {
+  line-height: 0%;
+  color: rgba(0, 0, 0, 0);
+}
+
+nav #btn-help {
+  border: 2px solid black;
+  border-radius: 100%;
+  width: calc(10vw - 4px);
+  height: calc(10vw - 4px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+nav.hidden .color-grid {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.color-grid {
+  width: 90vw;
+  height: 90vw;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#color-grid-game.hidden {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+nav.hidden .color-row {
+  display: flex;
+  justify-content: stretch;
+  width: 0%;
+  height: 0%;
+}
+
+.color-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30vw;
+}
+
+#color-row1 {
+  background-color: rgb(223, 223, 223);
+}
+
+#color-row2 {
+  background-color: rgb(191, 127, 64);
+}
+
+#color-row3 {
+  background-color: rgb(63, 63, 223);
+}
+
+nav.hidden .color-square {
+  transition: inherit;
+  border: 0px solid rgba(0, 0, 0, 1);
+  width: 0vw;
+  height: 0vw;
+}
+
+.color-square {
+  transition: background-color 0.5s;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 10%;
+  width: 25vw;
+  height: 25vw;
+}
+
+.color-square.hidden {
+  transition: background-color 0.5s, border 2s 0.5s, width 0s 2.5s,
+    height 0s 2.5s;
+  border: 2px solid rgba(1, 1, 1, 0);
+  border-radius: 10%;
+  pointer-events: none;
+}
+
+#square1 {
+  background-color: red;
+}
+#square2 {
+  background-color: grey;
+}
+#square3 {
+  background-color: white;
+}
+#square4 {
+  background-color: yellow;
+}
+#square5 {
+  background-color: grey;
+}
+#square6 {
+  background-color: cyan;
+}
+#square7 {
+  background-color: blue;
+}
+#square8 {
+  background-color: grey;
+}
+#square9 {
+  background-color: magenta;
+}
+
+#square0 svg {
+  position: relative;
+  transition: all 2s;
+}
+
+#color-grid-game[data-step="0"] #square0 svg {
+  bottom: 0;
+}
+
+#color-grid-game[data-step="1"] #square0 svg {
+  bottom: calc(-100% - 2px);
+}
+
+#color-grid-game[data-step="2"] #square0 svg {
+  bottom: calc(-200% - 4px);
+}
+
+#color-grid-game[data-step="3"] #square0 svg {
+  bottom: calc(-300% - 6px);
+}
+
+#color-grid-game[data-step="4"] #square0 svg {
+  bottom: calc(-400% - 8px);
+}
+
+#square10,
+#square-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#square-reset p {
+  pointer-events: none;
+}
+
+@media (orientation: landscape) {
+  nav.hidden {
+    width: 10vh;
+    padding: 11vh 0;
+  }
+
+  nav:not(.hidden) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 11vh 0 11vh 11vh;
+  }
+
+  nav #btn-menu {
+    width: 10vh;
+  }
+
+  nav:not(.hidden) div.item-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 10vw;
+    overflow-y: scroll;
+  }
+
+  nav.hidden div.item-container {
+    padding: 0;
+  }
+
+  nav:not(.hidden) div.item-container .btn-item {
+    width: 10vh;
+  }
+
+  nav.hidden div.item-container div.btn-item {
+    margin: 5px 1px;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  nav div.item-container div.btn-item svg {
+    width: 9vh;
+    height: 9vh;
+  }
+
+  nav #btn-help {
+    width: calc(10vh - 4px);
+    height: calc(10vh - 4px);
+  }
+
+  nav:not(.hidden) .color-grid {
+    width: 90vh;
+    height: 90vh;
+    flex-direction: row;
+  }
+
+  nav.hidden .color-grid {
+    width: 0vh;
+    height: 0vh;
+  }
+
+  nav:not(.hidden) .color-row {
+    width: 30vh;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  nav.hidden .color-row {
+    width: 0vh;
+    height: 0%;
+  }
+
+  nav:not(.hidden) .color-square {
+    width: 25vh;
+    height: 25vh;
+  }
+
+  nav.hidden .color-square {
+    width: 0vh;
+    height: 0vh;
+  }
+
+  #color-grid-game[data-step="0"] #square0 svg {
+    bottom: 0;
+    right: 0;
+  }
+
+  #color-grid-game[data-step="1"] #square0 svg {
+    bottom: 0;
+    right: calc(-100% - 2px);
+  }
+
+  #color-grid-game[data-step="2"] #square0 svg {
+    bottom: 0;
+    right: calc(-200% - 4px);
+  }
+
+  #color-grid-game[data-step="3"] #square0 svg {
+    bottom: 0;
+    right: calc(-300% - 6px);
+  }
+
+  #color-grid-game[data-step="4"] #square0 svg {
+    bottom: 0;
+    right: calc(-400% - 8px);
+  }
+}

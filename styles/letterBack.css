@@ -1,0 +1,59 @@
+#letter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  border: 2px solid black;
+  padding: 10px;
+  width: 100%;
+}
+
+#item-letter-back .letter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5vw;
+  width: 10vw;
+  height: 10vw;
+}
+
+#item-letter-back .letter.hidden {
+  display: none;
+}
+
+#item-letter-back .letter p {
+  pointer-events: none;
+}
+
+#screen-letter-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.screen-letter {
+  width: 25px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10%;
+  margin: 0px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#letter-back-help {
+  margin-top: 20px;
+  display: none;
+  width: 100%;
+}
+
+#letter-back-help.helping {
+  display: flex;
+  justify-content: center;
+}
